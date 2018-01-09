@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../testing-angulars-warsawjs/.idea/warsawjs-slides-template.iml" filepath="$PROJECT_DIR$/../testing-angulars-warsawjs/.idea/warsawjs-slides-template.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/testing-angulars-warsawjs.iml" filepath="$PROJECT_DIR$/.idea/testing-angulars-warsawjs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/warsawjs-slides-template.iml" filepath="$PROJECT_DIR$/.idea/warsawjs-slides-template.iml" />
     </modules>
   </component>
 </project>
