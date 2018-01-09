@@ -216,19 +216,23 @@
         <h2>ng-test-runner</h2>
     </section>
 
+    <section class="slide compact center-container">
+        <h2>setup testów</h2>
+    </section>
+
     <section class="slide prism">
-        <pre style="font-size: 23px;" class="language-javascript line-numbers">
+        <pre style="font-size: 22px;" class="language-javascript line-numbers">
             <code>
-            it('should increment counter value by 1', () => {
-              const html = app.runHtml('< counter value="start">< /counter>', {start: 0});
+            const test = require('angular-test-runner');
+            const {click, expectElement} = test.actions;
 
-              html.perform(
-                click.in('button#increment')
-              );
+            describe('counter component', () => {
+              let app, server;
 
-              html.verify(
-                expectElement('#counter').toHaveText('1')
-              );
+              beforeEach(() => {
+                app = test.app(['counterApp']);
+              });
+                ...testy
             });
             </code>
         </pre>
@@ -252,6 +256,28 @@
         </pre>
     </section>
 
+    <section class="slide compact center-container">
+        <h2>przykładowe testy</h2>
+    </section>
+
+    <section class="slide prism">
+        <pre style="font-size: 23px;" class="language-javascript line-numbers">
+            <code>
+            it('should increment counter value by 1', () => {
+              const html = app.runHtml('< counter value="start">< /counter>', {start: 0});
+
+              html.perform(
+                click.in('button#increment')
+              );
+
+              html.verify(
+                expectElement('#counter').toHaveText('1')
+              );
+            });
+            </code>
+        </pre>
+    </section>
+
     <section class="slide prism">
         <pre style="font-size: 23px;" class="language-javascript line-numbers">
             <code>
@@ -268,6 +294,10 @@
             });
             </code>
         </pre>
+    </section>
+
+    <section class="slide compact center-container">
+        <h2>komunikacja http</h2>
     </section>
 
     <section class="slide prism">
